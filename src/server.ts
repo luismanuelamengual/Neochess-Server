@@ -4,7 +4,7 @@ const socketPort = 5000;
 
 io.on('connection', client => {
     console.log('New incoming Connection from', client.id);
-    client.on('testMsg', function(message) {
+    client.on('testMsg', (message) => {
         console.log('Message from the client:',client.id,'->',message);
     })
 });
